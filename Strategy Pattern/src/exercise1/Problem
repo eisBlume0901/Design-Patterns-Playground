@@ -1,0 +1,7 @@
+Problem Inspiration: https://www.digitalocean.com/community/tutorials/strategy-design-pattern-in-java-example-tutorial
+
+You are tasked with implementing an online payment processing system for an e-commerce website.
+The system should support various payment methods, including credit card payments and G-Cash payments.
+However, the system should be designed in a way that allows for easy integration of additional payment
+methods in the future without changing the existing codebase.
+

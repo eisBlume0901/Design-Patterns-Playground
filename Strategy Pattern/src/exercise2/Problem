@@ -1,0 +1,23 @@
+Problem Inspiration: Design Puzzle Solution, Chapter 1, page 34 of Head First Design Patterns
+You are designing a battle game that involves various character classes,
+each with its unique attack strategy. The game features three character
+classes: Knight, Archer, and Wizard. Your goal is to design a system that
+allows these character classes to engage in battles using their distinct
+attack strategies. Additionally, you want to ensure that new character
+classes with different attack strategies can be added to the game without
+modifying the existing code.
+
+Character Classes and Attack Strategies:
+
+Knight:
+
+Attack Damage: 10 (for melee sword attacks)
+Health Points (HP): 100
+Archer:
+
+Attack Damage: 8 (for ranged bow and arrow attacks)
+Health Points (HP): 80
+Wizard:
+
+Attack Damage: 12 (for ranged magic spell attacks)
+Health Points (HP): 90
