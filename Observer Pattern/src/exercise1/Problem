@@ -1,0 +1,20 @@
+Problem Inspiration: https://www.baeldung.com/java-observer-pattern
+
+Problem: News Notification System
+
+You are tasked with building a news notification system.
+The system consists of a publisher (the news agency) and
+multiple subscribers (news readers). When the news agency
+publishes a new article, it should notify all subscribed
+news readers so they can receive and read the article.
+
+Requirements:
+
+Create a NewsAgency class that acts as the publisher.
+Create a NewsReader class that acts as the subscriber.
+Implement an Observer Pattern where NewsReader objects subscribe to the
+NewsAgency to receive notifications.
+When a new article is published by the NewsAgency, all subscribed NewsReader
+objects should be notified and display the article title.
+Ensure that new NewsReader objects can subscribe and existing ones can unsubscribe
+from the NewsAgency.

@@ -38,7 +38,6 @@ class BowAndArrowAttack implements AttackStrategy
 
 class MagicSpellAttack implements AttackStrategy
 {
-
     @Override
     public void performAttack(Character attacker, Character target) {
         int damage = calculateDamage();
