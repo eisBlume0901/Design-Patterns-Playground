@@ -8,7 +8,7 @@ public class Investor implements Observer
     }
     @Override
     public void update(double price) {
-        System.out.println("price change: " + price);
+        System.out.println(this.name + ", there is a price change: " + price);
     }
 
     public void subscribe(Stock stock)
@@ -21,5 +21,10 @@ public class Investor implements Observer
     {
         stock.removeInvestor(this);
         System.out.println(this.name + " unsubscribing to " + stock.getName());
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }

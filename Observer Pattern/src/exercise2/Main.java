@@ -1,5 +1,5 @@
 package exercise2;
-
+import java.util.*;
 public class Main
 {
     public static void main(String[] args)
@@ -9,14 +9,20 @@ public class Main
 
         Investor emerald = new Investor("Emerald");
         Investor claire = new Investor("Claire");
+        Investor amelie = new Investor("Amelie");
+        Investor mary = new Investor("Mary");
 
         emerald.subscribe(appleStock);
         claire.subscribe(googleStock);
         emerald.subscribe(googleStock);
+        amelie.subscribe(appleStock);
+        mary.subscribe(appleStock);
 
         appleStock.stockUpdate();
         googleStock.stockUpdate();
 
+        mary.unsubscribe(appleStock);
         appleStock.setPriceChange(3750.0);
+
     }
 }

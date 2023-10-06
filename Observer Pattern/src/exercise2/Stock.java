@@ -37,9 +37,9 @@ public class Stock implements Subject
     @Override
     public void notifyInvestors()
     {
+        System.out.println(this.name);
         for (Observer observer : investors)
         {
-            System.out.println(this.name);
             observer.update(price);
         }
     }
@@ -48,4 +48,6 @@ public class Stock implements Subject
     {
         notifyInvestors();
     }
+
+
 }
