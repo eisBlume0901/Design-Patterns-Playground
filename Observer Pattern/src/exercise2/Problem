@@ -1,0 +1,16 @@
+Problem: Stock Market Monitoring
+
+You are tasked with building a stock market monitoring system.
+The system should allow multiple investors to track the price changes of different stocks.
+When the price of a stock changes, all the investors interested in that stock should be
+notified with the updated price.
+
+Requirements:
+
+Create a Stock class that represents a stock with a unique symbol (e.g., AAPL for Apple Inc.) and a current price.
+Create an Investor class that represents an investor interested in one or more stocks.
+Implement the Observer Pattern, where Investor objects subscribe to receive price updates for specific stocks.
+When the price of a stock changes, notify all subscribed investors with the updated price.
+Allow investors to subscribe and unsubscribe from stocks of interest.
+Implement a method to change the price of a stock, triggering notifications to subscribed investors.
+Ensure that investors receive notifications only for the stocks they are interested in.
