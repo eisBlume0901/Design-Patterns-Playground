@@ -1,11 +1,17 @@
 package exercise2;
 
-public abstract class Character
-{
+import static java.lang.System.*;
+
+/*
+Mistakes at first attempt:
+Any instance variable cannot be put together. They have to function
+by themselves. I cannot allow the health, strength, and speed to share
+one abstract function. They need to have their own method.
+ */
+public abstract class Character {
     private int health = 0;
     private int strength = 0;
     private int speed = 0;
-    private String description = "Character";
 
     public int getHealth() {
         return health;
@@ -30,59 +36,40 @@ public abstract class Character
     public void setSpeed(int speed) {
         this.speed = speed;
     }
+    public abstract String getDescription();
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public abstract void increasePoints();
     public void displayStatus()
     {
-        System.out.println(getDescription() + ":\n" +
+        out.println(getDescription() + ":\n" +
                 "Health: " + getHealth() + " points\n" +
-                "Strength: "  + getStrength() + " points\n" +
+                "Strength: " + getStrength() + " points\n" +
                 "Speed: " + getSpeed() + " points\n");
     }
 }
 
 class Knight extends Character
 {
-    public Knight()
-    {
-        setDescription("Knight");
-    }
     @Override
-    public void increasePoints() {
-        setHealth(getHealth() + 40);
-        setStrength(getHealth() + 40);
-        setSpeed(getHealth() + 40);
+    public String getDescription()
+    {
+        return "Knight";
     }
 }
 
 class Merchant extends Character
 {
-    public Merchant()
-    {
-        setDescription("Merchant");
-    }
-
     @Override
-    public void increasePoints()
+    public String getDescription()
     {
-        setHealth(getHealth() + 30);
-        setStrength(getHealth() + 30);
-        setSpeed(getHealth() + 30);
+        return "Merchant";
     }
 }
-abstract class EnhancedCharacter extends Character
+
+abstract class CharacterEnhancer extends Character
 {
     private Character character;
 
-    public EnhancedCharacter(Character character)
+    public CharacterEnhancer(Character character)
     {
         this.character = character;
     }
@@ -91,10 +78,23 @@ abstract class EnhancedCharacter extends Character
         return character;
     }
 
-    public abstract String getDescription();
+    @Override
+    public int getHealth() {
+        return character.getHealth();
+    }
+
+    @Override
+    public int getStrength() {
+        return character.getStrength();
+    }
+
+    @Override
+    public int getSpeed() {
+        return character.getSpeed();
+    }
 }
 
-class Armor extends EnhancedCharacter
+class Armor extends CharacterEnhancer
 {
     public Armor(Character character)
     {
@@ -102,18 +102,17 @@ class Armor extends EnhancedCharacter
     }
 
     @Override
-    public String getDescription() {
-        return getCharacter().getDescription() + "\nequipped with Armor";
+    public int getHealth() {
+        return getCharacter().getHealth() + 50;
     }
 
     @Override
-    public void increasePoints() {
-        setHealth(getCharacter().getHealth() + 50);
-        setStrength(getCharacter().getStrength());
-        setSpeed(getCharacter().getSpeed());
+    public String getDescription() {
+        return getCharacter().getDescription() + ", equipped with Armor";
     }
 }
-class Sword extends EnhancedCharacter
+
+class Sword extends CharacterEnhancer
 {
     public Sword(Character character)
     {
@@ -121,35 +120,31 @@ class Sword extends EnhancedCharacter
     }
 
     @Override
-    public String getDescription() {
-        return getCharacter().getDescription() + "\nequipped with Sword";
+    public int getStrength() {
+        return getCharacter().getStrength() + 30;
     }
 
     @Override
-    public void increasePoints() {
-        setHealth(getCharacter().getHealth());
-        setStrength(getCharacter().getStrength() + 30);
-        setSpeed(getCharacter().getSpeed());
+    public String getDescription() {
+        return getCharacter().getDescription() + ", equipped with Sword";
     }
 }
 
-class Boots extends EnhancedCharacter
+class Boots extends CharacterEnhancer
 {
-
-    public Boots(Character character) {
+    public Boots(Character character)
+    {
         super(character);
     }
 
     @Override
-    public void increasePoints() {
-        setHealth(getCharacter().getHealth());
-        setStrength(getCharacter().getStrength());
-        setSpeed(getCharacter().getSpeed() + 10);
+    public int getSpeed() {
+        return getCharacter().getSpeed() + 10;
     }
 
     @Override
     public String getDescription() {
-        return getCharacter().getDescription() + "\nequipped with Boots";
+        return getCharacter().getDescription() + ", equipped with Boots";
     }
 }
 
@@ -158,28 +153,24 @@ class Main
     public static void main(String[] args)
     {
         Character knight = new Knight();
-        knight.increasePoints();
+        knight.displayStatus();
+        knight.setHealth(40);
+        knight.setStrength(40);
+        knight.setSpeed(40);
         knight.displayStatus();
 
-        knight = new Sword(knight);
-        knight.increasePoints();
-        knight.displayStatus();
-
-        knight = new Armor(knight);
-        knight.increasePoints();
-        knight.displayStatus();
-
-        knight = new Boots(knight);
-        knight.increasePoints();
-        knight.displayStatus();
-
-        knight = new Armor(knight);
-        knight.increasePoints();
+        knight = new Armor(new Armor((new Sword(new Boots(knight)))));
         knight.displayStatus();
 
         Character merchant = new Merchant();
-        merchant = new Armor(new Sword(new Boots(merchant)));
-        merchant.increasePoints();
         merchant.displayStatus();
+        merchant.setHealth(30);
+        merchant.setStrength(30);
+        merchant.setSpeed(30);
+        merchant.displayStatus();
+
+        merchant = new Armor(new Boots(merchant));
+        merchant.displayStatus();
+
     }
 }
