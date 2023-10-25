@@ -176,5 +176,10 @@ class Main
         knight = new Armor(knight);
         knight.increasePoints();
         knight.displayStatus();
+
+        Character merchant = new Merchant();
+        merchant = new Armor(new Sword(new Boots(merchant)));
+        merchant.increasePoints();
+        merchant.displayStatus();
     }
 }
