@@ -142,12 +142,14 @@ class Boots extends EnhancedCharacter
 
     @Override
     public void increasePoints() {
-
+        setHealth(getCharacter().getHealth());
+        setStrength(getCharacter().getStrength());
+        setSpeed(getCharacter().getSpeed() + 10);
     }
 
     @Override
     public String getDescription() {
-        return get;
+        return getCharacter().getDescription() + "\nequipped with Boots";
     }
 }
 
@@ -167,5 +169,12 @@ class Main
         knight.increasePoints();
         knight.displayStatus();
 
+        knight = new Boots(knight);
+        knight.increasePoints();
+        knight.displayStatus();
+
+        knight = new Armor(knight);
+        knight.increasePoints();
+        knight.displayStatus();
     }
 }
