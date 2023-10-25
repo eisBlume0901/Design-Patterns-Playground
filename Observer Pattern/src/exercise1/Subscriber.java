@@ -16,6 +16,7 @@ class NewsReader implements Subscriber
     }
     @Override
     public void update(String articleTitle) {
+        System.out.println(this.toString());
         System.out.println(articleTitle);
     }
 }
