@@ -5,9 +5,23 @@ The cost of each pizza varies and each extra topping also has an additional cost
 
 Pizza Base Prices:
 
-Margherita: ₱300.00
-Pepperoni: ₱350.00
-Veggie: ₱325.00
+Margherita Pizza Prices:
+Small: ₱300.00
+Medium: ₱400.00
+Large: ₱500.00
+Extra Large: ₱600.00
+
+Pepperoni Pizza Prices:
+Small: ₱350.00
+Medium: ₱450.00
+Large: ₱550.00
+Extra Large: ₱650.00
+
+Veggie Pizza Prices:
+Small: ₱325.00
+Medium: ₱425.00
+Large: ₱525.00
+Extra Large: ₱625.00
 
 Additional Ingredient Prices:
 
