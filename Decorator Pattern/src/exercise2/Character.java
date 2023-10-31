@@ -61,6 +61,11 @@ class CharacterDecorator extends Character
     }
 
     @Override
+    public int getSpeed() {
+        return character.getSpeed();
+    }
+
+    @Override
     public String getDescription() {
         return character.getDescription();
         // If we use super we pertain to description that we had
@@ -132,14 +137,22 @@ class Boots extends CharacterDecorator
         return super.getSpeed() + 10;
     }
 
-
+    @Override
+    public String getDescription() {
+        return super.getDescription() + ", Speed";
+    }
 }
 class Main
 {
     public static void main(String[] args)
     {
         Character knight = new Knight();
-        knight = new Armor(new Sword(knight));
+        knight = new Armor(new Sword(new Boots(knight)));
         knight.displayStatus();
+
+        Character merchant = new Merchant();
+        merchant = new Armor(new Boots(merchant));
+        merchant.displayStatus();
+
     }
 }
