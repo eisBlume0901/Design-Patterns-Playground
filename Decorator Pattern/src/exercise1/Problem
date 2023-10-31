@@ -1,20 +1,20 @@
-You are developing a game where players can customize their characters.
-The base character has some basic attributes like health, strength, and speed.
-Players can add enhancements to their characters which modify these attributes.
-The enhancements available are:
+You are designing a system for a pizza delivery service.
+The service offers different types of pizzas like Margherita, Pepperoni, and Veggie.
+Each type of pizza can have extra toppings like extra cheese, olives, chicken, and mushrooms.
+The cost of each pizza varies and each extra topping also has an additional cost.
 
-1. Armor: Increases health by 50.
-2. Sword: Increases strength by 30.
-3. Boots: Increases speed by 10.
+Pizza Base Prices:
 
-Each character can have multiple enhancements, and the same enhancement can be added multiple times.
-For example, a character with two armors will have their health increased by 100.
+Margherita: ₱300.00
+Pepperoni: ₱350.00
+Veggie: ₱325.00
 
-Design a system using the decorator pattern that will allow players to add enhancements to their characters
-and calculate the resulting attributes.
+Additional Ingredient Prices:
 
-Constraints:
+Extra Cheese: ₱50.00
+Olives: ₱40.00
+Chicken: ₱60.00
+Mushrooms: ₱35.00
 
-- Use the Decorator Pattern to solve this problem.
-- Each enhancement should be a separate class.
-
+Your task is to design a system that can calculate the cost of any order. The system should be
+flexible enough to easily add new types of pizzas or extra toppings in the future.
