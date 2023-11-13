@@ -62,7 +62,23 @@ abstract class Vehicle
     }
 }
 
-class Sedan
-{
+class ToyotaSedan extends Vehicle {
+    public ToyotaSedan()
+    {
+        setModel("Camry");
+        setDescription("Best-selling sedan known for its reliability, fuel efficiency, and comfortable.\n" +
+                "With a spacious interior and advanced safety features, it's an ideal choice for daily\n" +
+                "commuting and family trips");
+    }
+}
 
+class ToyotaSUV extends Vehicle
+{
+    public ToyotaSUV()
+    {
+        setModel("RAV4 - Sports Utility Vehicle");
+        setDescription("Versatile SUV that combines practicality with off-road capabilities.\n" +
+                "It offers a roomy interior, advanced safety technology, and a fuel efficient \n" +
+                "engine, making it suitable for both urban and adventurous driving");
+    }
 }
