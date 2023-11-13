@@ -6,7 +6,6 @@ public abstract class Pizza {
     public enum SIZE {
         SMALL, MEDIUM, LARGE, EXTRALARGE;
     }
-
     private SIZE size = SIZE.SMALL;
     private String description = "Pizza";
 

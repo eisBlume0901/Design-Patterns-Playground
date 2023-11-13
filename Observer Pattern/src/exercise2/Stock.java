@@ -44,6 +44,8 @@ public class Stock implements Subject
         }
     }
 
+    // The reason why we call the notifyInvestors inside the stockUpdate
+    // is because we override the interface method.
     public void stockUpdate()
     {
         notifyInvestors();
