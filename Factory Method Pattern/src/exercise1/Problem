@@ -1,0 +1,13 @@
+You are tasked with implementing a simplified vehicle manufacturing system using the Factory Method design pattern.
+The system should support the creation of different types of vehicles, such as cars and motorcycles.
+
+Requirements:
+
+1. Define a Vehicle interface with methods like assemble and getDescription.
+2. Implement concrete classes (Car and Motorcycle) that implement the Vehicle interface.
+3. Create a VehicleFactory interface with a factory method createVehicle. This method should
+take a type (e.g., "Car" or "Motorcycle") as an argument and return a corresponding Vehicle object.
+4. Implement concrete classes (CarFactory and MotorcycleFactory) that implement the VehicleFactory interface.
+These classes should provide the factory method to create specific types of vehicles.
+5. Ensure that the client code uses the VehicleFactory interface and the factory method to create instances of
+vehicles without specifying their concrete classes.
