@@ -74,11 +74,12 @@ class Engine
 class Fuel
 {
     private String model;
-    private String description;
-    public enum FuelType {
-        HYBRID, CONVENTIONAL
+    private String fuelType;
+    public enum fuelTypeClassification {
+        CONVENTIONAL, HYBRID
     }
 
+    private fuelTypeClassification fuelTypeClassification;
     public String emissionStandards;
 
     public String getModel() {
@@ -89,12 +90,12 @@ class Fuel
         this.model = model;
     }
 
-    public String getDescription() {
-        return description;
+    public String getFuelType() {
+        return fuelType;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
     }
 
     public String getEmissionStandards() {
@@ -104,6 +105,14 @@ class Fuel
     public void setEmissionStandards(String emissionStandards) {
         this.emissionStandards = emissionStandards;
     }
+
+    public Fuel.fuelTypeClassification getFuelTypeClassification() {
+        return fuelTypeClassification;
+    }
+
+    public void setFuelTypeClassification(Fuel.fuelTypeClassification fuelTypeClassification) {
+        this.fuelTypeClassification = fuelTypeClassification;
+    }
 }
 
 interface CarPartsFactory
@@ -112,15 +121,46 @@ interface CarPartsFactory
     public Engine createEngine();
     public Fuel createFuel();
 }
+
+class ToyotaSedanCarFactory implements CarPartsFactory
+{
+    @Override
+    public Chassis createChassis() {
+        Chassis toyotaSedanChassis = new Chassis();
+        toyotaSedanChassis.setModel("T-200");
+        toyotaSedanChassis.setType("Sedan");
+        toyotaSedanChassis.setMaterial("Aluminum Alloy");
+        return toyotaSedanChassis;
+    }
+
+    @Override
+    public Engine createEngine() {
+        Engine toyotaSedanEngine = new Engine();
+        toyotaSedanEngine.setModel("V6 Turbo Plus");
+        toyotaSedanEngine.setType("V6");
+        toyotaSedanEngine.setCylinderConfiguration("V6");
+        toyotaSedanEngine.setFuelInjectionSystem("Direct Injection");
+        return toyotaSedanEngine;
+    }
+
+    @Override
+    public Fuel createFuel() {
+        Fuel toyotaSedanFuel = new Fuel();
+        toyotaSedanFuel.setModel("Hybrid Flow");
+        toyotaSedanFuel.setFuelType("Hybrid");
+        toyotaSedanFuel.setFuelTypeClassification(Fuel.fuelTypeClassification.HYBRID);
+        toyotaSedanFuel.setEmissionStandards("Euro 6");
+        return toyotaSedanFuel;
+    }
+}
 public abstract class Vehicle {
 
     private String model;
     private String description;
-
     private Chassis chassis;
+
     private Engine engine;
     private Fuel fuel;
-
     public String getModel() {
         return model;
     }
@@ -238,8 +278,10 @@ class Car extends Vehicle
 
 class Sedan extends Car
 {
-    public Sedan()
+    private CarPartsFactory carPartsFactory;
+    public Sedan(CarPartsFactory carPartsFactory)
     {
+        this.carPartsFactory = carPartsFactory;
         setModel("Sedan");
         setDescription("The Sedan class represents a versatile and popular category of\n" +
                 "vehicles known for their comfort, practicality, and everyday usability.\n" +
@@ -252,23 +294,14 @@ class Sedan extends Car
         setConvertible(false);
         setHasGPS(false);
         setTransmission(TransmissionType.MANUAL);
-
-        Chassis sedanChassis = new Chassis();
-        sedanChassis.setModel("S-1000");
-        sedanChassis.setType("Sedan");
-        sedanChassis.setMaterial("Steel Alloy");
-        setChassis(sedanChassis);
-
-        Engine sedanEngine = new Engine();
-        sedanEngine.setModel("Standard Sedan Engine");
-        sedanEngine.setType("Inline-4");
-        sedanEngine.setCylinderConfiguration("Inline-4");
-        sedanEngine.setFuelInjectionSystem("Multi-Point Fuel Injection");
-
-        Fuel sedanFuel = new Fuel();
-
+        setChassis(carPartsFactory.createChassis());
+        setEngine(carPartsFactory.createEngine());
+        setFuel(carPartsFactory.createFuel());
     }
+
+
 }
+
 abstract class VehicleFactory
 {
     protected abstract Vehicle buildVehicle(String type);
@@ -286,22 +319,30 @@ abstract class VehicleFactory
     }
 }
 
-class ToyotaSedanCarFactory implements CarPartsFactory
+class ToyotaCarFactory extends VehicleFactory
 {
-
     @Override
-    public Chassis createChassis() {
-        Chassis toyotaChassis = new Chassis();
-        toyotaChassis.setModel("V6 Turbo Plus");
+    protected Vehicle buildVehicle(String type) {
+
+        CarPartsFactory toyotaSedanCarFactory = new ToyotaSedanCarFactory();
+        if (type.equals("Sedan"))
+            return new Sedan(toyotaSedanCarFactory);
+        else return null;
     }
+}
 
-    @Override
-    public Engine createEngine() {
-        return null;
-    }
+class Main
+{
+    public static void main(String[] args)
+    {
+        VehicleFactory toyotaCarFactory = new ToyotaCarFactory();
+        Vehicle toyotaSedan = toyotaCarFactory.orderVehicle("Sedan");
 
-    @Override
-    public Fuel createFuel() {
-        return null;
+        out.println();
+        out.println("Car Model: " + toyotaSedan.getModel());
+        out.println("Chassis: " + toyotaSedan.getChassis().getModel());
+        out.println("Engine: " + toyotaSedan.getEngine().getModel());
+        out.println("Fuel: " + toyotaSedan.getFuel().getModel());
+
     }
 }
