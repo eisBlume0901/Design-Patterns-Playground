@@ -1,0 +1,33 @@
+
+Certainly! Let's expand on the car parts and introduce specific types of chassis,
+engines, and fuel for Toyota and Honda:
+
+Abstract Factory Method Pattern Problem: Car Manufacturing System
+
+You are tasked with designing an enhanced car manufacturing system using the Abstract
+Factory Method pattern. The system should support the creation of different types of
+cars from various brands, each sharing common car parts.
+
+Requirements:
+
+
+Define a CarParts interface with methods like assembleChassis, installEngine, and provideFuel.
+Introduce specific types of chassis (ToyotaChassis, HondaChassis), engines (ToyotaEngine, HondaEngine),
+and fuel systems (ToyotaFuelSystem, HondaFuelSystem).
+
+Implement concrete classes (StandardCarParts, ToyotaChassis, HondaChassis, ToyotaEngine, HondaEngine,
+ToyotaFuelSystem, HondaFuelSystem) that implement the CarParts interface, providing default and brand-specific
+implementations for shared car parts assembly.
+
+Create an abstract CarFactory interface with two factory methods: createCar and createCarParts.
+createCar should return corresponding Car objects.
+createCarParts should return an instance of the shared CarParts.
+
+Implement concrete classes (ToyotaFactory and HondaFactory) that extend the CarFactory interface.
+These classes should provide implementations for both factory methods, creating instances of ToyotaCar,
+HondaCar, and the shared StandardCarParts.
+
+Ensure that the client code uses the CarFactory interface and the factory methods to create instances of cars and
+shared car parts without specifying their concrete classes.
+
+https://howtodoinjava.com/design-patterns/creational/abstract-factory-pattern-in-java/

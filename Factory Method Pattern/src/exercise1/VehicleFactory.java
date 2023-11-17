@@ -4,22 +4,44 @@ import static java.lang.System.*;
 
 public abstract class VehicleFactory
 {
-    protected abstract Vehicle createVehicle(String type);
+    protected abstract Vehicle buildVehicle(String type);
     public Vehicle orderVehicle(String type)
     {
         Vehicle vehicle = null;
 
-        vehicle = createVehicle(type);
+        vehicle = buildVehicle(type);
 
         vehicle.assemble();
+        vehicle.testRun();
 
         return vehicle;
     }
 }
 
-class CarFactory
+class CarFactory extends VehicleFactory
 {
+    @Override
+    protected Vehicle buildVehicle(String type) {
+        if (type.equals("Sedan"))
+            return new Sedan();
+        else if (type.equals("SUV"))
+            return new SportsUtilityVehicle();
+        else
+            return null;
+    }
+}
 
+class MotorcycleFactory extends VehicleFactory
+{
+    @Override
+    protected Vehicle buildVehicle(String type) {
+        if (type.equals("Cruiser"))
+            return new Cruiser();
+        else if (type.equals("SportBike"))
+            return new SportBike();
+        else
+            return null;
+    }
 }
 abstract class Vehicle
 {
@@ -62,23 +84,72 @@ abstract class Vehicle
     }
 }
 
-class ToyotaSedan extends Vehicle {
-    public ToyotaSedan()
+class Car extends Vehicle
+{
+
+}
+
+class Sedan extends Car
+{
+    // Toyota Camry
+    public Sedan()
     {
         setModel("Camry");
-        setDescription("Best-selling sedan known for its reliability, fuel efficiency, and comfortable.\n" +
-                "With a spacious interior and advanced safety features, it's an ideal choice for daily\n" +
-                "commuting and family trips");
+        setDescription("It is reliable and fuel-efficient sedan known for its\n" +
+                "comfortable interior and smooth ride. Ideal for daily\n" +
+                "commuting and family travel.");
     }
 }
 
-class ToyotaSUV extends Vehicle
+class SportsUtilityVehicle extends Car
 {
-    public ToyotaSUV()
+    // Ford Explorer
+    public SportsUtilityVehicle()
     {
-        setModel("RAV4 - Sports Utility Vehicle");
-        setDescription("Versatile SUV that combines practicality with off-road capabilities.\n" +
-                "It offers a roomy interior, advanced safety technology, and a fuel efficient \n" +
-                "engine, making it suitable for both urban and adventurous driving");
+        setModel("Explorer");
+        setDescription("It is rugged Sports Utility Vehicle (SUV) with ample\n" +
+                "space for passengers and cargo. Designed for adventurous\n" +
+                "journeys and off-road capabilities");
+    }
+}
+
+class Motorcycle extends Vehicle
+{
+
+}
+
+class Cruiser extends Motorcycle
+{
+    // Harley Davidson Fat Boy
+    public Cruiser()
+    {
+         setModel("Fat Boy");
+         setDescription("IT is a classic cruiser with a distinctive design,\n" +
+                 "comfortable ride, and powerful engine, perfect for laid-back cruising");
+    }
+}
+
+class SportBike extends Motorcycle
+{
+    // Ducati Panigale V4
+    public SportBike()
+    {
+        setModel("Panigale V4");
+        setDescription("It is a high-performance sportbike designed for speed\n" +
+                "and agility, featuring advanced aerodynamics and cutting-edge technology");
+    }
+}
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        VehicleFactory carFactory = new CarFactory();
+        Vehicle sedanCar = carFactory.orderVehicle("Sedan");
+
+        out.println();
+        VehicleFactory motorcycleFactory = new MotorcycleFactory();
+        Vehicle sportBikeMotorCycle = motorcycleFactory.orderVehicle("SportBike");
+
     }
 }
