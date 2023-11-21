@@ -2,13 +2,13 @@ package exercise2;
 
 public abstract class CourseProgramFactory
 {
-    public abstract Course offerCourse(String courseTitle);
+    protected abstract Course createCourse(String courseTitle);
 
-    public Course createCourse(String courseTitle)
+    public Course offerCourse(String courseTitle)
     {
         Course course = null;
 
-        course = offerCourse(courseTitle);
+        course = createCourse(courseTitle);
 
         return course;
     }
@@ -17,13 +17,13 @@ public abstract class CourseProgramFactory
 class JavaProgrammingFactory extends CourseProgramFactory
 {
     @Override
-    public Course offerCourse(String courseTitle) {
+    protected Course createCourse(String courseTitle) {
 
         if (courseTitle.equalsIgnoreCase("Java Basics"))
             return new JavaBasics();
         if (courseTitle.equalsIgnoreCase("Object-Oriented Programming"))
             return new OOPWithJava();
-        if (courseTitle.equalsIgnoreCase("Exception Handling"))
+        else if (courseTitle.equalsIgnoreCase("Exception Handling"))
             return new ExceptionHandlingWithJava();
         else return null;
     }
@@ -32,12 +32,25 @@ class JavaProgrammingFactory extends CourseProgramFactory
 class WebDevelopmentFactory extends CourseProgramFactory
 {
     @Override
-    public Course offerCourse(String courseTitle) {
+    protected Course createCourse(String courseTitle) {
 
         if (courseTitle.equalsIgnoreCase("Web Development"))
             return new IntroductionToWebDev();
-        if (courseTitle.equalsIgnoreCase("HTML and CSS"))
+        else if (courseTitle.equalsIgnoreCase("HTML and CSS"))
             return new HTMLandCSS();
+        else return null;
+    }
+}
+
+class DataScienceFactory extends CourseProgramFactory
+{
+    @Override
+    protected Course createCourse(String courseTitle) {
+
+        if (courseTitle.equalsIgnoreCase("Machine Learning"))
+            return new MachineLearning();
+        else if (courseTitle.equalsIgnoreCase("Statistics"))
+            return new StatisticalAnalysis();
         else return null;
     }
 }
@@ -122,3 +135,44 @@ class HTMLandCSS extends Course
     }
 }
 
+class MachineLearning extends Course
+{
+    public MachineLearning()
+    {
+        setCourseTitle("Machine Learning Fundamentals");
+        setCourseDuration(4);
+        setCourseInstructor("Grover Nicholas");
+    }
+}
+
+class StatisticalAnalysis extends Course
+{
+    public StatisticalAnalysis()
+    {
+        setCourseTitle("Descriptive Statistics and Inferential Statistics");
+        setCourseDuration(10);
+        setCourseInstructor("Malcom Ripley");
+    }
+}
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        CourseProgramFactory javaDevelopmentFactory = new JavaProgrammingFactory();
+        Course javaBasics = javaDevelopmentFactory.offerCourse("Java Basics");
+
+        System.out.println("Title : " + javaBasics.getCourseTitle());
+        System.out.println("Duration: " + javaBasics.getCourseDuration());
+        System.out.println("Instructor: " + javaBasics.getCourseInstructor());
+
+        System.out.println();
+
+        CourseProgramFactory dataScienceFactory = new DataScienceFactory();
+        Course statistics = dataScienceFactory.offerCourse("Statistics");
+
+        System.out.println("Title: " + statistics.getCourseTitle());
+        System.out.println("Duration: " +  statistics.getCourseDuration());
+        System.out.println("Instructor: " + statistics.getCourseInstructor());
+    }
+}
