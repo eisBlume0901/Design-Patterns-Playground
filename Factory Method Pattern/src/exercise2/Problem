@@ -1,0 +1,21 @@
+    A company called "TechGuru" is developing an application to manage different types of Course programs. 
+    They have various Course programs such as "Java Programming," "Web Development," and "Data Science." 
+    Each Course program has its own content and materials.
+    
+    Implement the Factory Method Design Pattern to create a CourseProgram interface and concrete classes 
+    for each type of Course program. The company wants the flexibility to add new Course programs without 
+    modifying the existing code.
+    
+    Requirements:
+    Create a CourseProgram interface with a method getCourseContent() to retrieve the content of the Course program.
+    
+    Implement concrete classes JavaProgramming, WebDevelopment, and DataScience that implement the CourseProgram interface.
+    
+    Implement a CourseProgramFactory interface with a method createCourseProgram() that returns an instance of a specific 
+    Course program.
+    
+    Create concrete factories JavaProgrammingFactory, WebDevelopmentFactory, and DataScienceFactory that implement the CourseProgramFactory 
+    interface.
+    
+    In the application, allow the user to choose a Course program, and then use the corresponding factory to create an instance 
+    of that Course program and display its content.
