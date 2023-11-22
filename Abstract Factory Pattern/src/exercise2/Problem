@@ -1,0 +1,32 @@
+A company named "JobConnector" is developing a job portal application.
+They have different types of job listings, including "IT Jobs," "Finance Jobs,"
+and "Marketing Jobs." Each job listing can have multiple job positions.
+
+Implement the Abstract Factory Design Pattern to create a JobPosition interface
+with a method getDetails() to retrieve the details of a specific job position.
+Implement concrete classes SoftwareEngineer, FinancialAnalyst, and MarketingSpecialist
+that implement the JobPosition interface.
+
+Additionally, create a JobListing interface with a method createJobPosition() that returns
+an instance of a specific job position. Implement concrete classes ITJobListing, FinanceJobListing,
+and MarketingJobListing that implement the JobListing interface.
+
+In the application, allow the user to choose a job listing, and then use the corresponding factory
+to create instances of job positions within that listing and display their details.
+
+Requirements:
+
+Create a JobPosition interface with a method getDetails() to retrieve the details of a specific
+job position.
+
+Implement concrete classes SoftwareEngineer, FinancialAnalyst, and MarketingSpecialist that implement
+the JobPosition interface. Each class should provide specific details for its respective job position.
+
+Create a JobListing interface with a method createJobPosition() that returns an instance of a specific
+job position.
+
+Implement concrete classes ITJobListing, FinanceJobListing, and MarketingJobListing that implement the
+JobListing interface. Each class should instantiate the corresponding job positions.
+
+In the application, allow the user to choose a job listing type. Use the selected factory to create instances
+of job positions within that listing and display their details.
