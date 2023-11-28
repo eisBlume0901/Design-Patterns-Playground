@@ -11,6 +11,8 @@ public abstract class JobConnectorFactory
 
           return job;
       }
+
+
 }
 interface JobHiringPost
 {
@@ -107,5 +109,4 @@ class SoftwareDeveloper extends Job
 {
 
 }
-
 
