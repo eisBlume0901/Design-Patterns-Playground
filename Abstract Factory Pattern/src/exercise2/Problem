@@ -1,32 +1,42 @@
-A company named "JobConnector" is developing a job portal application.
-They have different types of job listings, including "IT Jobs," "Finance Jobs,"
-and "Marketing Jobs." Each job listing can have multiple job positions.
+Activity: Abstract Factory Design Pattern with Parts Manufacturing
 
-Implement the Abstract Factory Design Pattern to create a JobPosition interface
-with a method getDetails() to retrieve the details of a specific job position.
-Implement concrete classes SoftwareEngineer, FinancialAnalyst, and MarketingSpecialist
-that implement the JobPosition interface.
-
-Additionally, create a JobListing interface with a method createJobPosition() that returns
-an instance of a specific job position. Implement concrete classes ITJobListing, FinanceJobListing,
-and MarketingJobListing that implement the JobListing interface.
-
-In the application, allow the user to choose a job listing, and then use the corresponding factory
-to create instances of job positions within that listing and display their details.
+Problem Statement:
+A robotics company named "RoboCraft" is developing a new generation of robots.
+Each robot consists of several components, including a Body, Arms, and Sensors.
+The company wants to implement the Abstract Factory Design Pattern to create families
+of related components.
 
 Requirements:
 
-Create a JobPosition interface with a method getDetails() to retrieve the details of a specific
-job position.
+Create an interface named "RobotPart" with a method "assemble" to define how each part is assembled.
 
-Implement concrete classes SoftwareEngineer, FinancialAnalyst, and MarketingSpecialist that implement
-the JobPosition interface. Each class should provide specific details for its respective job position.
+Implement concrete classes "MetalBody," "SteelArms," and "SensorPack" that implement the "RobotPart"
+interface.
 
-Create a JobListing interface with a method createJobPosition() that returns an instance of a specific
-job position.
+Create an abstract factory interface named "RobotFactory" with methods "createBody," "createArms," and
+"createSensors" to manufacture each part of the robot.
 
-Implement concrete classes ITJobListing, FinanceJobListing, and MarketingJobListing that implement the
-JobListing interface. Each class should instantiate the corresponding job positions.
+Implement concrete factories "HighTechRobotFactory" and "IndustrialRobotFactory" that implement the
+"RobotFactory" interface.
 
-In the application, allow the user to choose a job listing type. Use the selected factory to create instances
-of job positions within that listing and display their details.
+Each concrete factory should produce a family of related components: "HighTechRobotFactory" creates
+parts with advanced materials, while "IndustrialRobotFactory" creates parts suitable for heavy-duty tasks.
+
+In the application, allow the user to choose a type of robot they want to build (High-Tech or Industrial).
+Use the corresponding factory to create all parts of the robot and display the details of each part's assembly.
+Example Output:
+
+Copy code
+Choose the type of robot you want to build:
+1. High-Tech Robot
+2. Industrial Robot
+Enter your choice: 1
+
+Assembling High-Tech Robot Components:
+High-Tech Metal Body assembled.
+High-Tech Steel Arms assembled.
+High-Tech Sensor Pack assembled.
+
+High-Tech Robot Assembled Successfully!
+This problem encourages students to design a system where the creation of related product parts is
+encapsulated within separate factories, allowing easy extension for new types of robots in the future.
