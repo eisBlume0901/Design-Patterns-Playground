@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-29T08:53:11.200Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="zoDBAxBt3zfyS91X7pe6" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-29T09:04:39.278Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="5XwzXqGnq_zUQR9J9bTG" version="22.1.4" type="github">
   <diagram name="Page-1" id="hUjEpkly2eNINpmnEEEA">
-    <mxGraphModel dx="832" dy="364" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="921" dy="403" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,32 +10,23 @@
         <mxCell id="NbQcgySadGwn3jhOum9s-10" value="# createRobot(String type) : Robot&lt;br&gt;+ sellRobot(String type) : Robot" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="NbQcgySadGwn3jhOum9s-8" vertex="1">
           <mxGeometry y="29" width="250" height="71" as="geometry" />
         </mxCell>
-        <mxCell id="NbQcgySadGwn3jhOum9s-11" value="RoboCraftStore" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="300" y="310" width="250" height="100" as="geometry" />
+        <mxCell id="NbQcgySadGwn3jhOum9s-11" value="QuantumInnovationsRobotStore" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="140" y="670" width="250" height="100" as="geometry" />
         </mxCell>
         <mxCell id="NbQcgySadGwn3jhOum9s-13" value="# createRobot(String type) : Robot (High-Tech Robot)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="NbQcgySadGwn3jhOum9s-11" vertex="1">
           <mxGeometry y="29" width="250" height="71" as="geometry" />
         </mxCell>
         <mxCell id="NbQcgySadGwn3jhOum9s-20" value="&amp;lt;&amp;lt; abstract &amp;gt;&amp;gt;&lt;br&gt;Robot" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="690" y="127.5" width="250" height="54" as="geometry" />
+          <mxGeometry x="810" y="127.5" width="250" height="54" as="geometry" />
         </mxCell>
         <mxCell id="NbQcgySadGwn3jhOum9s-22" value="&amp;nbsp;property1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="NbQcgySadGwn3jhOum9s-20" vertex="1">
           <mxGeometry y="29" width="250" height="25" as="geometry" />
         </mxCell>
         <mxCell id="NbQcgySadGwn3jhOum9s-23" value="High-Tech Robot" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="690" y="312" width="250" height="79" as="geometry" />
-        </mxCell>
-        <mxCell id="NbQcgySadGwn3jhOum9s-24" value="&amp;lt;&amp;lt;stereotype1&amp;gt;&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="NbQcgySadGwn3jhOum9s-23" vertex="1">
-          <mxGeometry y="29" width="250" height="25" as="geometry" />
+          <mxGeometry x="664" y="360" width="250" height="54" as="geometry" />
         </mxCell>
         <mxCell id="NbQcgySadGwn3jhOum9s-25" value="stereotype property 1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="NbQcgySadGwn3jhOum9s-23" vertex="1">
-          <mxGeometry y="54" width="250" height="25" as="geometry" />
-        </mxCell>
-        <mxCell id="NbQcgySadGwn3jhOum9s-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.493;entryY=1.094;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="NbQcgySadGwn3jhOum9s-11" target="NbQcgySadGwn3jhOum9s-10" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="NbQcgySadGwn3jhOum9s-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1.04;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="NbQcgySadGwn3jhOum9s-23" target="NbQcgySadGwn3jhOum9s-22" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry y="29" width="250" height="25" as="geometry" />
         </mxCell>
         <mxCell id="NbQcgySadGwn3jhOum9s-30" value="&amp;lt;&amp;lt; interface &amp;gt;&amp;gt;&lt;br&gt;RobotPartsFactory" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1370" y="109" width="250" height="120" as="geometry" />
@@ -44,10 +35,10 @@
           <mxGeometry y="29" width="250" height="91" as="geometry" />
         </mxCell>
         <mxCell id="NbQcgySadGwn3jhOum9s-36" value="RoboCraftPartsFactory" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1370" y="310" width="250" height="140" as="geometry" />
+          <mxGeometry x="1480" y="530" width="250" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="NbQcgySadGwn3jhOum9s-38" value="+ createRobotBody : MetalRobotBody&lt;br&gt;+ createRobotArms: SteelRobotArms&lt;br&gt;+ createRobotSensor: SensorPackRobotSensor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="NbQcgySadGwn3jhOum9s-36" vertex="1">
-          <mxGeometry y="29" width="250" height="111" as="geometry" />
+        <mxCell id="NbQcgySadGwn3jhOum9s-38" value="+ createRobotBody :&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;material : Solid and corrosion-resistant stainless steel&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;design : Box-liked and rugged design&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;powerSource : Wired power connection&lt;br&gt;+ createRobotArms: SteelRobotArms&lt;br&gt;+ createRobotSensor: SensorPackRobotSensor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" parent="NbQcgySadGwn3jhOum9s-36" vertex="1">
+          <mxGeometry y="29" width="250" height="191" as="geometry" />
         </mxCell>
         <mxCell id="Bde_iS7oefZhUgNLe-8d-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NbQcgySadGwn3jhOum9s-10" target="NbQcgySadGwn3jhOum9s-20">
           <mxGeometry relative="1" as="geometry" />
@@ -61,7 +52,7 @@
         <mxCell id="Bde_iS7oefZhUgNLe-8d-5" value="RobotBody" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1770" y="30" width="250" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="Bde_iS7oefZhUgNLe-8d-6" value="- material : String&lt;br&gt;- degressOfFreedom : int&lt;br&gt;- payloadCapacity : int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="Bde_iS7oefZhUgNLe-8d-5">
+        <mxCell id="Bde_iS7oefZhUgNLe-8d-6" value="- material : String&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- design : String&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;- powerSource : String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="Bde_iS7oefZhUgNLe-8d-5">
           <mxGeometry y="29" width="250" height="91" as="geometry" />
         </mxCell>
         <mxCell id="Bde_iS7oefZhUgNLe-8d-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="NbQcgySadGwn3jhOum9s-32" target="Bde_iS7oefZhUgNLe-8d-5">
@@ -79,17 +70,31 @@
         <mxCell id="Bde_iS7oefZhUgNLe-8d-11" value="RobotSensor" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="1770" y="380" width="250" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="Bde_iS7oefZhUgNLe-8d-12" value="- material : String&lt;br&gt;- design : String&lt;br&gt;- powerSource : String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="Bde_iS7oefZhUgNLe-8d-11">
+        <mxCell id="Bde_iS7oefZhUgNLe-8d-12" value="- sensorTypes : String&lt;br&gt;- sensitivity : String&lt;br&gt;- range : String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="Bde_iS7oefZhUgNLe-8d-11">
           <mxGeometry y="29" width="250" height="91" as="geometry" />
         </mxCell>
         <mxCell id="Bde_iS7oefZhUgNLe-8d-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Bde_iS7oefZhUgNLe-8d-12" target="NbQcgySadGwn3jhOum9s-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="Bde_iS7oefZhUgNLe-8d-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Bde_iS7oefZhUgNLe-8d-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="Bde_iS7oefZhUgNLe-8d-14" value="RoboCraftStore" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="490" y="440" width="250" height="100" as="geometry" />
+          <mxGeometry x="414" y="485" width="250" height="100" as="geometry" />
         </mxCell>
         <mxCell id="Bde_iS7oefZhUgNLe-8d-15" value="# createRobot(String type) : Robot (High-Tech Robot)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="Bde_iS7oefZhUgNLe-8d-14">
           <mxGeometry y="29" width="250" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="Bde_iS7oefZhUgNLe-8d-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.476;entryY=0.993;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NbQcgySadGwn3jhOum9s-11" target="NbQcgySadGwn3jhOum9s-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Bde_iS7oefZhUgNLe-8d-21" value="Industrial Robot" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="980" y="350" width="250" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="Bde_iS7oefZhUgNLe-8d-23" value="stereotype property 1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1" parent="Bde_iS7oefZhUgNLe-8d-21">
+          <mxGeometry y="29" width="250" height="25" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
